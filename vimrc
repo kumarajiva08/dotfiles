@@ -9,13 +9,14 @@ filetype plugin indent on
 
 " color scheme and font {{{
 colorscheme oceanblack
-set guifont=ProggyClean:h12
+set cursorline
 
 " }}}
 
 " basic option {{{
 set autoindent
 set relativenumber
+set ruler
 
 " }}}
 
@@ -31,4 +32,30 @@ set colorcolumn=+1
 noremap  <F2> :NERDTreeToggle<cr>
 inoremap <F2> <esc>:NERDTreeToggle<cr>
 " }}}
+
+" Searhing {{{
+set ignorecase
+" smartcase - ignore case only when all in lower case
+set smartcase
+set hlsearch
+set incsearch
+set showmatch
+" }}}
+
+" Soft tabs
+set tabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
+
+"Mouse
+set ttyfast
+set mouse=a
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
 
