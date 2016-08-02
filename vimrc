@@ -8,7 +8,7 @@ filetype plugin indent on
 
 
 " color scheme and font {{{
-colorscheme oceanblack
+colorscheme wombat256
 set cursorline
 
 " }}}
@@ -21,6 +21,7 @@ set ruler
 " }}}
 
 " tabs, spaces, wrapping {{{
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set wrap
 set textwidth=80
 set formatoptions=qrn1
