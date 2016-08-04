@@ -29,10 +29,6 @@ set colorcolumn=+1
 " }}}
 
 
-" nerdtree {{{
-noremap  <F2> :NERDTreeToggle<cr>
-inoremap <F2> <esc>:NERDTreeToggle<cr>
-" }}}
 
 " Searhing {{{
 set ignorecase
@@ -53,11 +49,19 @@ set expandtab
 set ttyfast
 set mouse=a
 
+""" Key Mappings
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+"
+" nerdtree
+noremap  <F2> :NERDTreeToggle<cr>
+inoremap <F2> <esc>:NERDTreeToggle<cr>
+
+:imap jk <Esc>
+
 
 " Vim Powerline
 set nocompatible   " Disable vi-compatibility
