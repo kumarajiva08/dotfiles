@@ -1,3 +1,9 @@
+set nocompatible   " Disable vi-compatibility
+
+
+" Leader - Spacebar
+let mapleader = " "
+
 " pathogen plugin {{{
 " Now any plugins you wish to install can be extracted to a subdirectory 
 " under ~/.vim/bundle, and they will be added to the 'runtimepath'
@@ -8,7 +14,12 @@ filetype plugin indent on
 
 
 " color scheme and font {{{
-colorscheme wombat256
+syntax enable
+"colorscheme wombat256
+"set background=dark
+"solarized options 
+colorscheme solarized
+
 set cursorline
 
 " }}}
@@ -21,7 +32,7 @@ set ruler
 " }}}
 
 " tabs, spaces, wrapping {{{
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
+"highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set wrap
 set textwidth=80
 set formatoptions=qrn1
@@ -37,6 +48,7 @@ set smartcase
 set hlsearch
 set incsearch
 set showmatch
+noremap <silent> <leader>, :noh<cr> " Stop highlight after searching"
 " }}}
 
 " Soft tabs
@@ -64,6 +76,24 @@ inoremap <F2> <esc>:NERDTreeToggle<cr>
 
 
 " Vim Powerline
-set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
+
+"Map Ctrl + S to save in any mode {{{
+noremap <silent> <C-S>          :update<CR> 
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
+nnoremap <Leader>w :w<CR>
+" }}}
+
+" Navigate properly when lines are wrapped
+nnoremap j gj
+nnoremap k gk
+
+" Auto resize active split
+" This is really cool!!!
+set winwidth=104
+set winheight=5
+set winminheight=5
+set winheight=999
+
