@@ -79,6 +79,8 @@ inoremap <F2> <esc>:NERDTreeToggle<cr>
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 
+
+
 "Map Ctrl + S to save in any mode {{{
 noremap <silent> <C-S>          :update<CR> 
 vnoremap <silent> <C-S>         <C-C>:update<CR>
@@ -96,4 +98,17 @@ set winwidth=104
 set winheight=5
 set winminheight=5
 set winheight=999
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" Open buffer using CtrlP
+nnoremap <Leader>b :CtrlPBuffer<CR>
+
 
