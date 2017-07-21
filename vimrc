@@ -15,10 +15,13 @@ filetype plugin indent on
 
 " color scheme and font {{{
 syntax enable
-"colorscheme wombat256
-"set background=dark
+" colorscheme wombat256
+set background=dark
 "solarized options 
 colorscheme solarized
+
+" toggle between dark and light background
+call togglebg#map("<F5>")
 
 set cursorline
 
@@ -38,7 +41,6 @@ set textwidth=80
 set formatoptions=qrn1
 set colorcolumn=+1
 " }}}
-
 
 
 " Searhing {{{
@@ -111,3 +113,6 @@ let g:UltiSnipsEditSplit="vertical"
 nnoremap <Leader>b :CtrlPBuffer<CR>
 
 
+" Windows behaviour
+source $VIMRUNTIME/mswin.vim
+behave mswin
